@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Cursor & Parallax Hero</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Con trỏ chuột tùy chỉnh -->
+  <div class="custom-cursor" id="customCursor"></div>
+
+  <!-- Hero Section với hiệu ứng Parallax -->
+  <header class="hero" id="heroSection">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="badge">Parallax Experience</span>
+      <h1>Vũ Trụ Vô Tận & Không Gian Đắm Chìm</h1>
+      <p>Cuộn chuột để trải nghiệm hiệu ứng hình nền Parallax với tốc độ 0.5x tối ưu hiệu suất.</p>
+      <div class="hero-actions">
+        <button class="interactive-btn magnetic-btn">Khám phá ngay</button>
+        <a href="#about" class="interactive-link magnetic-btn">Tìm hiểu thêm &darr;</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Phần nội dung bên dưới để tạo chiều sâu và cuộn trang -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2>Trải Nghiệm Tương Tác Hiện Đại</h2>
+      <p>
+        Hiệu ứng Parallax Background chỉ được kích hoạt và cập nhật khi Hero Section nằm trong vùng hiển thị (Viewport).
+        Nhờ kết hợp với <strong>IntersectionObserver</strong> và <strong>requestAnimationFrame</strong>, hiệu ứng hoạt động siêu mượt với 60-120fps mà không gây giật lag hay lãng phí tài nguyên CPU/GPU khi người dùng cuộn qua các section khác.
+      </p>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Tối Ưu Hiệu Năng</h3>
+          <p>Dừng tính toán khi phần tử ra khỏi màn hình nhờ Intersection Observer API.</p>
+        </div>
+        <div class="card">
+          <h3>Tỉ Lệ Cuộn 0.5x</h3>
+          <p>Hình nền dịch chuyển mượt mà theo công thức <code>translateY(scrollY * 0.5px)</code>.</p>
+        </div>
+        <div class="card">
+          <h3>Con Trỏ Tùy Chỉnh</h3>
+          <p>Vòng tròn phản hồi linh hoạt với độ trễ chuyển động tinh tế theo con trỏ chuột.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Interactive Immersive Experience</p>
+  </footer>
+
+  <script src="java.js"></script>
+</body>
+</html>
